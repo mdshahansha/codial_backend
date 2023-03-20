@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import env from "./environment.js";
-mongoose.connect(`mongodb://localhost/${env.db}`);
+mongoose.connect(`mongodb+srv://codeialtest1234:aman1234@cluster0.jnofoef.mongodb.net/?retryWrites=true&w=majority`);
 
 const db = mongoose.connection;
 

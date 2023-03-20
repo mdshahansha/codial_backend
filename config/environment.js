@@ -48,7 +48,7 @@ const production = {
   name: "production",
   asset_path: process.env.FLOCKER_ASSET_PATH,
   session_cookies_key: process.env.FLOCKER_SESSION_COOKIE_KEY,
-  db: process.env.FLOCKER_DB,
+  db: "mongodb+srv://codeialtest1234:aman1234@cluster0.jnofoef.mongodb.net/?retryWrites=true&w=majority",
   smtp: {
     service: "gmail",
     host: "smtp.gmail.com",

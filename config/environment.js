@@ -21,7 +21,7 @@ const development = {
   name: "development",
   asset_path: "./assets",
   session_cookies_key: "blahsomething",
-  db: "flocker_development",
+  db: "mongodb+srv://codeialtest1234:aman1234@cluster0.jnofoef.mongodb.net/?retryWrites=true&w=majorityt",
   smtp: {
     service: "gmail",
     host: "smtp.gmail.com",

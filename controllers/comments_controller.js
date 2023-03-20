@@ -1,8 +1,8 @@
 import Comment from "../models/comment.js";
 import Post from "../models/post.js";
-import { newComment } from "../mailers/comments_mailer.js";
-import queue from "../config/kue.js";
-import commentEmailWorker from "../workers/comment_email_worker.js";
+// import { newComment } from "../mailers/comments_mailer.js";
+// import queue from "../config/kue.js";
+// import commentEmailWorker from "../workers/comment_email_worker.js";
 import Like from "../models/like.js";
 
 // module.exports.create = async function(req, res){
@@ -69,16 +69,16 @@ async function create(req, res) {
 
       // comment = await comment.populate('user', 'name email').execPopulate();
       const nC = await Comment.findById(comment._id).populate("user");
-      newComment(nC);
+      // newComment(nC);
 
-      let job = queue.create("email", nC).save(function (err) {
-        if (err) {
-          console.log("Error in sending to the queue", err);
-          return;
-        }
-        // commentEmailWorker
-        console.log("job enqueued", job.id);
-      });
+      // let job = queue.create("email", nC).save(function (err) {
+      //   if (err) {
+      //     console.log("Error in sending to the queue", err);
+      //     return;
+      //   }
+      //   // commentEmailWorker
+      //   console.log("job enqueued", job.id);
+      // });
 
       if (req.xhr) {
         //  comment = await comment.populate('user', 'name').execPopulate();

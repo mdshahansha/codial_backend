@@ -16,7 +16,7 @@ const accessLogStream = rfs.createStream("access.log", {
 });
 
 
-
+/*
 const development = {
   name: "development",
   asset_path: "./assets",
@@ -72,3 +72,4 @@ const production = {
 export default eval(process.env.FLOCKER_ENVIRONMENT) == undefined
   ? development
   : eval(process.env.FLOCKER_ENVIRONMENT);
+*/
